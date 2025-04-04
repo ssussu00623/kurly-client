@@ -23,6 +23,9 @@ export default function MainProductListSlider({category}) {
           .catch((error)=>console.log(error))
   },[category]);
 
+  console.log('mainProductList>>>>>', mainProductList);
+  
+
   return (
     <div className='section_product'>
         <div className='product_list main_list'>

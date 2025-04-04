@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function OrderProductList({ isToggled, toggleList, orderList }) {
+export default function OrderProductList({ isToggled, toggleList, orderlist }) {
   return (
     <div className={isToggled ? 'order-list' : 'hide-list'} onClick={toggleList}>
       {isToggled ? (
@@ -8,7 +8,7 @@ export default function OrderProductList({ isToggled, toggleList, orderList }) {
           <p className='f16 w600' style={{ padding: "16px 0px 0px 16px" }}>샛별배송</p>
           <div className='order-list-bar'></div>
           <ul>
-            {orderList.map(item => (
+            {orderlist.map(item => (
               <li key={item.no}>
                 <div className='space-between'>
                   <div className='order-item flex'>
@@ -30,9 +30,9 @@ export default function OrderProductList({ isToggled, toggleList, orderList }) {
         </div>
       ) : (
         <p className='f16'>
-          {orderList.length <= 1
-            ? `${orderList[0]?.subject} 상품을 주문합니다`
-            : `${orderList[0]?.subject} 외 ${orderList.length - 1}개 상품을 주문합니다`}
+          {orderlist.length <= 1
+            ? `${orderlist[0]?.subject} 상품을 주문합니다`
+            : `${orderlist[0]?.subject} 외 ${orderlist.length - 1}개 상품을 주문합니다`}
         </p>
       )}
     </div>

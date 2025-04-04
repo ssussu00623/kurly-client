@@ -21,9 +21,9 @@
  
  export default function Order() {
  
-   const { orderList, userInfo, setUserInfo } = useContext(OrderContext);
+   const { orderlist, userInfo, setUserInfo } = useContext(OrderContext);
    const { totalPriceAll, totalPriceDc, totalPriceCal } = useCalculate();
-   const { getUserInfo, getOrderList } = useOrder();
+   const { getUserInfo, getorderlist } = useOrder();
    const { getCartList } = useCart();
    const { isLogin } = useContext(AuthContext);
    const navigate = useNavigate();
@@ -41,7 +41,7 @@
        }
        return;
      }
-     getOrderList();
+     getorderlist();
      getUserInfo();
      getCartList();
    }, [isLogin]);
@@ -85,7 +85,7 @@
          </button>
        </div>
  
-       <OrderProductList isToggled={isToggled} toggleList={toggleList} orderList={orderList} />
+       <OrderProductList isToggled={isToggled} toggleList={toggleList} orderlist={orderlist} />
  
        {/* 주문자 정보 */}
        <OrderInfo userInfo={userInfo} />

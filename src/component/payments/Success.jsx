@@ -18,15 +18,15 @@ export default function SuccessPage() {
     const amount = searchParams.get("amount");
 
 
-    const { orderList, setOrderList  } = useContext(OrderContext); 
-    const { getOrderList } = useOrder(); 
+    const { orderlist, setorderlist  } = useContext(OrderContext); 
+    const { getorderlist } = useOrder(); 
     const { deleteCheckedItems } = useCart(); 
     const navigate = useNavigate();
 
-    // 결제 완료 페이지 까지 넘어오면 주문 내역(OrderList) 테이블 업데이트
-    // orderList 업데이트 // 빈 배열 넘어오는 것 방지!
+    // 결제 완료 페이지 까지 넘어오면 주문 내역(orderlist) 테이블 업데이트
+    // orderlist 업데이트 // 빈 배열 넘어오는 것 방지!
     useEffect(() => {
-        (async () => setOrderList(await getOrderList()))();
+        (async () => setorderlist(await getorderlist()))();
     }, []);
 
     async function confirmPayment() {
@@ -42,7 +42,7 @@ export default function SuccessPage() {
         const commonTid = `TID${Date.now()}`;
     
         // ✅ db로 보낼 데이터 생성
-        const sendOrders = orderList
+        const sendOrders = orderlist
             .filter(({ no }) => checkedItems.includes(no)) // 체크된 상품만 필터링
             .map(({ qty, pid, price, dc }) => ({
                 qty,
@@ -53,7 +53,7 @@ export default function SuccessPage() {
             }));
     
         if (sendOrders.length) {
-            await axios.post('http://54.180.92.85:9000/order/add', { orderList: sendOrders }); // 서버로 전송
+            await axios.post('http://54.180.92.85:9000/order/add', { orderlist: sendOrders }); // 서버로 전송
             await deleteCheckedItems(checkedItems); // 체크된 상품 장바구니 삭제
             localStorage.removeItem("checkedItems"); // 로컬스토리지 checkedItems 삭제
             setIsConfirmed(true);
