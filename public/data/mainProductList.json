@@ -1,0 +1,233 @@
+[
+    {
+        "pid": "1",
+        "name": "[모로칸오일] 헤어 트리트먼트 100ml(펌핑기 포함)",
+        "brand": "모로칸오일",
+        "description": "아르간 오일 기반의 프리미엄 헤어&바디 케어",
+        "originalPrice": 58000,
+        "discountRate": "10%",
+        "discountedPrice": 52200,
+        "specialPrice": "라이브특가",
+        "delivery": {
+            "type": "샛별배송",
+            "details": "23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)"
+                        },
+        "seller": "컬리",
+        "packaging": "상온 (종이포장)",
+        "total_price": 52200,
+        "image_url": "https://picsum.photos/id/1/500/700",
+        "isLive":true,
+        "isPayback":true,
+        "isToday": true 
+    },
+    {
+        "pid": "2",
+        "name": "[2모로칸오일] 헤어 트리트먼트 100ml(펌핑기 포함)",
+        "brand": "2모로칸오일",
+        "description": "2아르간 오일 기반의 프리미엄 헤어&바디 케어",
+        "originalPrice": 58000,
+        "discountRate": "10%",
+        "discountedPrice": 52200,
+        "specialPrice": "라이브특가",
+        "delivery": {
+            "type": "샛별배송",
+            "details": "23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)"
+                        },
+        "seller": "컬리",
+        "packaging": "상온 (종이포장)",
+        "total_price": 52200,
+        "image_url": "https://picsum.photos/id/2/500/700",
+        "isLive":true,
+        "isPayback":false,
+        "isToday": true
+    },
+    {
+        "pid": "3",
+        "name": "[3모로칸오일] 헤어 트리트먼트 100ml(펌핑기 포함)",
+        "brand": "3모로칸오일",
+        "description": "3아르간 오일 기반의 프리미엄 헤어&바디 케어",
+        "originalPrice": 58000,
+        "discountRate": "24%",
+        "discountedPrice": 52200,
+        "specialPrice": "라이브특가",
+        "delivery": {
+            "type": "샛별배송",
+            "details": "23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)"
+                        },
+        "seller": "컬리",
+        "packaging": "상온 (종이포장)",
+        "total_price": 52200,
+        "image_url": "https://picsum.photos/id/3/500/700",
+        "isLive":false,
+        "isPayback":false,
+        "isToday": true
+    },
+    {
+        "pid": "4",
+        "name": "[4모로칸오일] 헤어 트리트먼트 100ml(펌핑기 포함)",
+        "brand": "4모로칸오일",
+        "description": "4아르간 오일 기반의 프리미엄 헤어&바디 케어",
+        "originalPrice": 58000,
+        "discountRate": "15%",
+        "discountedPrice": 52200,
+        "specialPrice": "라이브특가",
+        "delivery": {
+            "type": "샛별배송",
+            "details": "23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)"
+                        },
+        "seller": "컬리",
+        "packaging": "상온 (종이포장)",
+        "total_price": 52200,
+        "image_url": "https://picsum.photos/id/4/500/700",
+        "isLive":true,
+        "isPayback":false,
+        "isToday": true
+    },
+    {
+        "pid": "5",
+        "name": "[4모로칸오일] 헤어 트리트먼트 100ml(펌핑기 포함)",
+        "brand": "4모로칸오일",
+        "description": "4아르간 오일 기반의 프리미엄 헤어&바디 케어",
+        "originalPrice": 58000,
+        "discountRate": "15%",
+        "discountedPrice": 52200,
+        "specialPrice": "라이브특가",
+        "delivery": {
+            "type": "샛별배송",
+            "details": "23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)"
+                        },
+        "seller": "컬리",
+        "packaging": "상온 (종이포장)",
+        "total_price": 52200,
+        "image_url": "https://picsum.photos/id/4/500/700",
+        "isLive":true,
+        "isPayback":false,
+        "isToday": false
+    },
+    {
+        "pid": "6",
+        "name": "[4모로칸오일] 헤어 트리트먼트 100ml(펌핑기 포함)",
+        "brand": "4모로칸오일",
+        "description": "4아르간 오일 기반의 프리미엄 헤어&바디 케어",
+        "originalPrice": 58000,
+        "discountRate": "15%",
+        "discountedPrice": 52200,
+        "specialPrice": "라이브특가",
+        "delivery": {
+            "type": "샛별배송",
+            "details": "23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)"
+                        },
+        "seller": "컬리",
+        "packaging": "상온 (종이포장)",
+        "total_price": 52200,
+        "image_url": "https://picsum.photos/id/4/500/700",
+        "isLive":true,
+        "isPayback":false,
+        "isToday": false
+    },
+    {
+        "pid": "7",
+        "name": "[4모로칸오일] 헤어 트리트먼트 100ml(펌핑기 포함)",
+        "brand": "4모로칸오일",
+        "description": "4아르간 오일 기반의 프리미엄 헤어&바디 케어",
+        "originalPrice": 58000,
+        "discountRate": "15%",
+        "discountedPrice": 52200,
+        "specialPrice": "라이브특가",
+        "delivery": {
+            "type": "샛별배송",
+            "details": "23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)"
+                        },
+        "seller": "컬리",
+        "packaging": "상온 (종이포장)",
+        "total_price": 52200,
+        "image_url": "https://picsum.photos/id/4/500/700",
+        "isLive":true,
+        "isPayback":false,
+        "isToday": false
+    },
+    {
+        "pid": "8",
+        "name": "[4모로칸오일] 헤어 트리트먼트 100ml(펌핑기 포함)",
+        "brand": "4모로칸오일",
+        "description": "4아르간 오일 기반의 프리미엄 헤어&바디 케어",
+        "originalPrice": 58000,
+        "discountRate": "15%",
+        "discountedPrice": 52200,
+        "specialPrice": "라이브특가",
+        "delivery": {
+            "type": "샛별배송",
+            "details": "23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)"
+                        },
+        "seller": "컬리",
+        "packaging": "상온 (종이포장)",
+        "total_price": 52200,
+        "image_url": "https://picsum.photos/id/4/500/700",
+        "isLive":true,
+        "isPayback":false,
+        "isToday": false
+    },
+    {
+        "pid": "9",
+        "name": "[4모로칸오일] 헤어 트리트먼트 100ml(펌핑기 포함)",
+        "brand": "4모로칸오일",
+        "description": "4아르간 오일 기반의 프리미엄 헤어&바디 케어",
+        "originalPrice": 58000,
+        "discountRate": "15%",
+        "discountedPrice": 52200,
+        "specialPrice": "라이브특가",
+        "delivery": {
+            "type": "샛별배송",
+            "details": "23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)"
+                        },
+        "seller": "컬리",
+        "packaging": "상온 (종이포장)",
+        "total_price": 52200,
+        "image_url": "https://picsum.photos/id/4/500/700",
+        "isLive":true,
+        "isPayback":false,
+        "isToday": false
+    },
+    {
+        "pid": "10",
+        "name": "[4모로칸오일] 헤어 트리트먼트 100ml(펌핑기 포함)",
+        "brand": "4모로칸오일",
+        "description": "4아르간 오일 기반의 프리미엄 헤어&바디 케어",
+        "originalPrice": 58000,
+        "discountRate": "15%",
+        "discountedPrice": 52200,
+        "specialPrice": "라이브특가",
+        "delivery": {
+            "type": "샛별배송",
+            "details": "23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)"
+                        },
+        "seller": "컬리",
+        "packaging": "상온 (종이포장)",
+        "total_price": 52200,
+        "image_url": "https://picsum.photos/id/4/500/700",
+        "isLive":true,
+        "isPayback":false,
+        "isToday": false
+    },
+    {
+        "pid": "11",
+        "name": "[4모로칸오일] 헤어 트리트먼트 100ml(펌핑기 포함)",
+        "brand": "4모로칸오일",
+        "description": "4아르간 오일 기반의 프리미엄 헤어&바디 케어",
+        "originalPrice": 58000,
+        "discountRate": "15%",
+        "discountedPrice": 52200,
+        "specialPrice": "라이브특가",
+        "delivery": {
+            "type": "샛별배송",
+            "details": "23시 전 주문 시 수도권/충청 내일 아침 7시 전 도착 (그 외 지역 아침 8시 전 도착)"
+                        },
+        "seller": "컬리",
+        "packaging": "상온 (종이포장)",
+        "total_price": 52200,
+        "image_url": "https://picsum.photos/id/4/500/700",
+        "isLive":true,
+        "isPayback":false,
+        "isToday": false
+    }
+]

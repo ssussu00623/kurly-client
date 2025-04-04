@@ -1,0 +1,13 @@
+{
+  "header_top_menu" : [
+                        {"no":1, "path":"/member/signup", "title":"회원가입"},
+                        {"no":2, "path":"/member/login", "title":"로그인"},
+                        {"no":3, "path":"/", "title":"고객센터"}
+                      ],
+  "support_menu" : [
+                      {"no":1,"path":"/", "title":"공지사항"},
+                      {"no":2,"path":"/", "title":"자주하는 질문"},
+                      {"no":3,"path":"/", "title":"1 : 1 문의"},
+                      {"no":4,"path":"/", "title":"대량주문 문의"}
+                    ]
+}

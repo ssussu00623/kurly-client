@@ -1,0 +1,703 @@
+@import url('./reset.scss'); 
+@import url('./main.scss'); 
+
+/**************************************
+** COMMONS 
+** 2025.01.22 김다희 작성
+**************************************/
+:root{
+  --color-main: rgb(95, 0, 128);
+  --color-bk-main: #000;
+  --color-153: rgb(153, 153, 153);
+  --color-181: rgb(181, 181, 181);
+
+  --borderlight : #dfe4eb;
+  --fontblack : #333333;
+  --darkblack : #222222;
+  --kurlypurple : #672092;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  font-weight: 300 400 500 600 700 800 900; 
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-style: normal;
+}
+
+* {
+  font-family: 'Pretendard-Regular';
+  color: #333333;
+  // letter-spacing: -0.9px;
+  }
+
+span,
+p,
+li,
+div {
+  font-family: 'Pretendard-Regular';
+  color: #333333;
+  // letter-spacing: -0.9px;
+}
+
+
+.thin{
+  font-family: 'Pretendard-Thin' !important;
+}
+.light{
+  font-family: 'Pretendard-light';
+}
+
+.header_outline,
+.content_outline,
+.footer_outline{
+  width: 100%;
+}
+.content_outline,
+.content{
+  position: relative;
+}
+.header,
+.content,
+.footer{
+  // border: 1px solid green;
+  width: 1050px;
+  margin: 0px auto;
+}
+
+ /**************************************
+** HEADER- TOP
+** 2025.02.03 김다희 작성
+**************************************/
+.header {
+  // border: 1px solid gray;
+  height: 156px;
+}
+.header_top{
+  // border: 1px solid blue;
+  height: 100px;
+}
+.header .header_top_menu{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+.header_top_menu_item{
+  position: relative;
+}
+.header_top_menu_item:first-child{
+  color: var(--color-main);
+}
+.header_top_menu_item:first-child::after,
+.header_top_menu_item:nth-child(2)::after{
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  margin: 0px 10px;
+  background-color: rgb(217, 217, 217);
+} 
+.drop_down_icon{
+  display: inline-block;
+  width: 8px;
+  height: 5px;
+  background-image: url('../../public/images/commonImage/drop_down.png');
+  background-size: cover;
+  margin-left: 5px;
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+.surrport_drop_down{
+  display: none;
+  position: absolute;
+  right: -3px;
+  top: 18px;
+  width: 120px;
+  padding: 5px 9px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(241, 240, 240);
+  z-index: 51;
+  visibility: hidden;
+  pointer-events: none;
+}
+.surrport_drop_down li {
+  height: 23px;
+  line-height: 24px;
+  font-size: 12px;
+  color: var(--darkblack);
+}
+.header_top_menu_item:last-child:hover .surrport_drop_down,
+.drop_down_icon:hover .surrport_drop_down{
+  display: block;
+  visibility: visible;
+  pointer-events: auto;
+}
+.header_middle{
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_middle_left {
+  position: relative;
+  width: 248px;
+}
+.header_middle_left button {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-main);
+  margin-left: 20px;
+  padding: 0;
+  letter-spacing: normal;
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+}
+
+.header_middle_search{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 48px;
+  padding-left: 14px;
+  border: 1px solid var(--color-main);
+  border-radius: 6px;
+  background-color: #fff;
+  margin-right: 85px;
+}
+
+.header_middle_search input{
+  width: 300px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  letter-spacing: -0.33px;
+}
+
+.search_button{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  bottom: 3px;
+  background: url('../../public/images/commonImage/search_img.svg');
+}
+.header_middle_right{
+  display: flex;
+  align-items: center;
+}
+.header_top_icon{
+  // border: 1px solid red;
+  width: 35px;
+  height: 45px;
+  margin-right: 25px;
+  font-weight: 400px;
+  background-color: transparent;
+}
+.header_top_icon.cart_icon{
+  margin-right: 8px;
+  position: relative;
+}
+.header_top_icon img {
+  transition: filter 0.3s ease;
+}
+.header_top_icon:hover img{
+  filter: brightness(0) saturate(100%) invert(16%) sepia(95%) saturate(800%) hue-rotate(250deg) brightness(100%) contrast(150%);
+}
+.location_icon{
+  position: relative;
+  top: 5px;
+}
+.cart_icon p{
+  position: absolute;
+  top: 1.5px;
+  right: -11px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-main);
+}
+.cartItmem_icon{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  top: 40px;
+  font-size: 9px;
+  line-height: 15px;
+  
+}
+.location_icon .location_info{
+  position: absolute;
+  right: -120px;
+  width: 250px;
+  height: 100px;
+  border: 1px solid var(--borderlight);
+  z-index: 100;
+  background-color: #fff;
+  font-size: 1px;
+  font-family: 'Pretendard-light';
+  padding: 15px 5px 15px 15px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.location_icon:hover .location_info{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.location_info div{
+  display: flex;
+  align-items: center;
+}
+.location_info span{
+  display: block;
+  text-align: left;
+  font-size: 15px;
+  font-family: 'Pretendard-Regular';
+  letter-spacing: 2px;
+  margin-top: 5px;
+} 
+.location_info span:first-child{
+  color: var(--color-main);
+  margin-left: 3px;
+}
+.location_info button{
+  margin-top: 15px;
+  border: 1px solid var(--color-main);
+  border-radius: 5px;
+}
+.location_info button:nth-of-type(1){
+  padding: 8px 20px;
+  margin-right: 8px;
+  color: var(--color-main);
+}
+.location_info button:nth-of-type(2){
+  position: relative;
+  padding: 8px 45px 8px 52px;
+  color: #fff;
+  background-color: var(--color-main);
+}
+.location_info button:nth-of-type(2) img{
+  position: absolute;
+  filter: brightness(0) invert(1);
+  top: 6px;
+  left: 29px;
+  width: 20px;
+}
+.location_info .user_address{
+  display: block;
+  margin-top: 5px;
+}
+
+.location_info .user_address span{ 
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #000;
+  font-family: 'Pretendard-Regular';
+ 
+}  
+.delivery_changebtn{
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+  margin: 10px;
+  width: 230px;
+  height: 40px;
+}
+
+ /**************************************
+** HEADER - BOTTOM
+** 2025.02.05 김다희 작성
+**************************************/
+
+.header_bottom_menu{
+  display: flex;
+  justify-content: space-between;
+  height: 56px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 4px 0px;
+  z-index: 300;
+  // position: relative;
+  letter-spacing: -0.3px;
+}
+.category{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.category_title{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.3px;
+}
+.category_icon{
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  margin-right: 14px;
+  background-color: rgb(51, 51, 51); /* 기본 색상 */
+  mask-image: url('../../public/images/commonImage/header_menu.svg');
+  -webkit-mask-image: url('../../public/images/commonImage/header_menu.svg');
+}
+.category_div:hover .category_title{
+  color: var(--color-main);
+}
+.category_div:hover .category_icon{
+  background-color: var(--color-main);
+}
+.category_list{
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 100%;
+  left: 0;
+  width: 220px;
+  z-index: 101;
+  background-color: #fff;
+}
+.category_list::-webkit-scrollbar{
+  width: 100px;
+}
+.category_list li,
+.variety_list li{
+  padding: 10px;
+  color: var(--color-153);
+  font-size: 12px;
+}
+.category_list_2{
+  padding: 0;
+  font-size: 12px;
+  color: var(--color-153);
+  font-family: 'Pretendard-Thin';
+}
+.category_list_1 img,
+.category_list_2 img,
+.category_list_2{
+  width: 20px;
+  margin-right: 10px;
+  color: var(--color-153);
+  filter: grayscale(70%) contrast(50%) brightness(0.9); /*회색변환/대비/밝기*/
+}
+.category:hover .category_list{
+  display: block;
+}
+.category_list li:hover{
+  filter: none; 
+  background-color: rgb(240, 239, 239);
+}
+.category_list li:hover span{
+  color: var(--color-main);
+}
+.category_list_1:hover img{
+  filter: none; 
+}
+// .category_list_2:hover {
+//   color: var(--color-153);  
+// }
+.variety_list  {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(240, 239, 239);
+}
+.variety_list li{
+  height: 20px;
+}
+.category_list li:hover .category_acitve:hover {
+  text-decoration: underline;
+  color: var(--color-main);
+}
+
+
+
+
+
+
+
+
+.header_bottom_menu .menu_list{
+  display: flex;
+  justify-content: space-between;
+}
+.header_bottom_menu .menu_list li{
+  width: 150px;
+  height: 37px;
+  padding-top: 18px;
+  text-align: center;
+}
+.header_bottom_menu .menu_list button {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+}
+.header_bottom_menu .menu_list button:hover {
+  color: var(--color-main);
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.delivery_btn_line{
+  margin: 0;
+  height: 32px;
+  margin-top: 12px;
+  padding: 8px 16px 5px;
+  border: 1px solid rgb(239, 238, 238);
+  color: rgb(102, 102, 102);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 50;
+}
+.delivery_btn_line span{
+  height: 20px;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.32px;
+  color: rgb(102, 102, 102);
+}
+.delivery_btn_line span:first-child{
+  font-weight: 500;
+  color: var(--color-main);
+  margin-right: 1.5px;
+}
+
+
+
+
+ /**************************************
+** Footer 
+** 2025.02.03 김다희 작성
+**************************************/
+.footer_outline{
+  padding-top: 30px;
+  border-top: 1px solid rgb(247, 247, 247);
+}
+.footer_bottom{
+  width: 100%;
+  padding: 20px 0 30px;
+  background-color: rgb(247, 247, 247);
+}
+.footer_bottom p{
+  text-align: center;
+  font-size: 10px;
+  line-height: 15px;
+  color: var(--color-153);
+}
+.footer_bottom p:last-child{
+  padding-top: 7px;
+  font-style: normal;
+}
+.footer_middle{
+  // border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 0 33px;
+  border-top: 1px solid rgb(238, 238, 238);
+}
+.footer_middle button{
+  display: flex;
+  text-align: left;
+}
+.footer_middle img{
+  width: 34px;
+  margin-right: 10px;
+}
+.footer_middle button:nth-child(2) img{
+  width: 80px;
+  margin-right: 10px;
+}
+.footer_middle p{
+  font-size: 10px;
+  line-height: 14.5px;
+  color: var(--color-153);
+}
+.footer_top{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.footer_left li:first-child{
+  padding-bottom: 17px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+}
+.footer_left li:nth-child(2) strong{
+  display: block;
+  padding-bottom: 20px;
+  font-size: 28px;
+  line-height: 40px;
+}
+.footer_left li:nth-child(2) strong span{
+  margin-left: 8px;
+  font-weight: normal;
+  font-size: 16px;
+}
+.support_info{
+  display: flex;
+}
+.support_list li:last-child{
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color-153);
+}
+.support_info_btn{
+  display: block;
+  width: 140px;
+  height: 40px;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 3px;
+  line-height: 39px;
+  text-align: center;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+.detail_info{
+  margin-top: 2px;
+  color: var(--color-153);
+  letter-spacing: -0.5px;
+  line-height: 16.8px;
+}
+.footer_line{
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  margin: 0px 8px;
+  background-color: var(--color-153);
+}
+.footer_top_right{
+  width: 559px;
+}
+.footer_links{
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.footer_links li{
+  letter-spacing: -0.5px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.company_info {
+  margin-bottom: 40px;
+}
+.company_info p{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color-153);
+}
+.footer_top_right .sns_info{
+  display: flex;
+}
+.footer_top_right .sns_info li a img{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.main_product_add{
+  cursor: pointer;
+  color: var(--color-main);
+}
+ /**************************************
+** Top Banner 
+** 2025.02.15 김다희 작성
+************************************* */
+.top_banner{
+  width: 1050px;
+  margin: 0 auto;
+  position: relative;
+}
+.top_banner_content{
+  text-align: center;
+  transition: margin 0.4s linear;
+  background-color: var(--color-main);
+}
+.banner_content,
+.banner_content span{
+  font-size: 11px;
+  line-height: 42px;
+  font-family: 'Pretendard-light';
+  letter-spacing: -0.1px;
+  color: rgb(255, 255, 255);
+}
+.banner_content span{
+  font-weight: bold;
+}
+.top_banner button{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 23%;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+.top_banner_btn{
+  fill: var(--color-153);
+  background: none;
+}
+
+ /**************************************
+** Side Bar  
+** 2025.02.15 김다희 작성
+************************************* */
+
+ .side_bar_outline{
+  position: fixed;
+  top: 540px;
+  right: 20px;
+  z-index: 1;
+  margin-top: 93px;
+  transition: top 0.6s ease;
+}
+.scrolled .side_bar_outline{
+  top: calc(50vh - 200px); //  화면의 세로 중앙에서 위로 200px 이동
+}
+.side_bar1{
+  width: 80px;
+  line-height: 16px;
+}
+.side_delivery_info{
+  height: 120px;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+.side_delivery_info img{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: initial;
+  background: none;
+  opacity: 1;
+}
+
+.side_bar2 ul li{
+  width: 80px;
+  font-size: 11px;
+  font-family: 'Pretendard-Thin' ;
+  letter-spacing: -0.3px;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  padding: 6px 0;
+  border: 1px solid rgb(221, 221, 221);
+  background-color: rgb(255, 255, 255);
+}
+

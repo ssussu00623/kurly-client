@@ -1,0 +1,61 @@
+{
+  "banner_img":[
+      { 
+        "num":"1",
+        "path":"/",
+        "img":"/images/commonImage/banner1.png"
+      },
+      {
+        "num":"2",
+        "path":"/",
+        "img":"/images/commonImage/banner2.png"
+      },
+      {
+        "num":"3",
+        "path":"/",
+        "img":"/images/commonImage/banner3.png"
+      },
+      {
+        "num":"4",
+        "path":"/",
+        "img":"/images/commonImage/banner4.png"
+      },
+      {
+        "num":"5",
+        "path":"/",
+        "img":"/images/commonImage/banner5.png"
+      }
+  ],
+  "section_title":[
+    {
+      "title":"💖뷰컬페 뭘 살지 고민이라면",
+      "sub_title":"베스트셀러는 물론 야심차게 준비한 MD픽까지!",
+      "path":"/main/category/best",
+      "category":"best"
+    },
+    {
+      "title":"⌛주말 한정! 더 특별한 가격",
+      "sub_title":"뷰티컬리에서 자신있게 선보여요!",
+      "path":"/main/category/discount",
+      "category":"discount"
+    },
+    {
+      "title":"💎핫한 신상품",
+      "sub_title":"한 눈에 보는 인기 신상품품",
+      "path":"/main/category/new",
+      "category":"new"
+    }
+  ],
+  "special_category":[
+    {"img":"/images/commonImage/event1.jpg"},
+    {"img":"/images/commonImage/event2.jpg"},
+    {"img":"/images/commonImage/event3.jpg"},
+    {"img":"/images/commonImage/event4.jpg"},
+    {"img":"/images/commonImage/event5.jpg"},
+    {"img":"/images/commonImage/event6.jpg"},
+    {"img":"/images/commonImage/event7.jpg"},
+    {"img":"/images/commonImage/event8.jpg"},
+    {"img":"/images/commonImage/event9.jpg"},
+    {"img":"/images/commonImage/event10.jpg"}
+  ]
+}

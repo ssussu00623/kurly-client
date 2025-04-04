@@ -1,0 +1,1148 @@
+/******************************
+ * member : 공통 
+ ******************************/
+@font-face {
+  font-family: 'Pretendard-Regular';
+  font-weight: 300 400 500 600 700 800 900;
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-style: normal;
+}
+
+.member_true_button {
+  font-family: 'Pretendard-Regular';
+  display: block;
+  padding: 0px 10px;
+  text-align: center;
+  width: 320px;
+  height: 54px;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(95, 0, 128);
+  border: 0px none;
+}
+
+.member_none_button {
+  font-family: 'Pretendard-Regular';
+  display: block;
+  padding: 0px 10px;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  height: 54px;
+  border-radius: 3px;
+  color: rgb(95, 0, 128);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(95, 0, 128);
+  color: purple;
+}
+
+
+/******************************
+ * member : Login
+ ******************************/
+.member_form_box {
+  span {
+    font-family: 'Pretendard-Regular';
+  }
+
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    text-align: center;
+
+    li {
+      padding: 5px;
+
+
+      .loginform_input {
+        font-family: 'Pretendard-Regular';
+        width: 300px;
+        height: 46px;
+        padding: 0px 11px 1px 15px;
+        border-radius: 4px;
+        border: 1px solid rgb(221, 221, 221);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgb(51, 51, 51);
+        outline: none;
+        box-sizing: border-box;
+      }
+    }
+
+    .login_founder {
+      text-align: right;
+      font-size: 12px;
+      padding: 0;
+      margin: 0;
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .member_title_box {
+    text-align: center;
+    margin: 90px 0px 30px 0px;
+
+    span {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+  }
+}
+
+/******************************
+ * member : Signup 
+ ******************************/
+
+.signup_body {
+  margin-top: 50px;
+  width: 700px;
+  margin-left: 200px;
+
+  .signup_title {
+    font-family: 'Pretendard-Regular';
+    margin-bottom: 50px;
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: -1px;
+    color: rgb(51, 51, 51);
+  }
+
+  .signup_sub_title {
+    font-family: 'Pretendard-Regular';
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(51, 51, 51);
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    line-height: 17px;
+    text-align: right;
+
+    span {
+      color: red;
+    }
+  }
+
+  .button_box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.signup_form {
+  /* border: 1px solid green; */
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  color: var(--color-signup-font);
+
+  ul {
+    li {
+      width: 700px;
+      padding: 20px;
+
+      input {
+        outline: none;
+      }
+
+      label {
+        font-family: 'Pretendard-Regular';
+        display: inline-block;
+        font-size: 1.1em;
+        font-weight: 700;
+        text-indent: 3px;
+        margin: 0 0 6px 10px;
+        width: 25%;
+
+        span {
+          color: red;
+          font-family: 'Pretendard-Regular';
+        }
+      }
+
+      .signup_input {
+        border: 1px solid gainsboro;
+        border-radius: 8px;
+        width: 300px;
+        height: 30px;
+        padding: 10px;
+      }
+
+      .signup_phone_botton {
+        border: 1px solid gainsboro;
+        width: 150px;
+        height: 45px;
+        border-radius: 5px;
+        margin-left: 5px;
+      }
+
+      .member_line_top {
+        border-bottom: 1px solid rgb(51, 51, 51);
+      }
+
+      .signup_gender {
+        width: 330px;
+        display: inline-flex;
+        justify-content: space-around;
+        font-family: 'Pretendard-Regular';
+
+        input[type=radio] {
+          appearance: none;
+          border: max(2px, 0.1em) solid gainsboro;
+          border-radius: 50%;
+          width: 1.5em;
+          height: 1.5em;
+        }
+
+        input[type=radio]:checked {
+          border: 0.4em solid rgb(95, 0, 128);
+        }
+      }
+    }
+  }
+
+  .email_full {
+    display: inline-block;
+    width: 56%;
+
+    .email_address {
+      width: 38%;
+      border: 1px solid gainsboro;
+      border-radius: 8px;
+      padding-left: 10px;
+      height: 40px;
+    }
+
+    .email_domain {
+      padding: 10px;
+      border-radius: 10%;
+    }
+  }
+
+  .address_full {
+    display: flex;
+
+    label {
+      width: 180px;
+
+    }
+
+    div {
+      margin-left: 10px;
+      margin-bottom: 10px;
+
+      .address_zipcode {
+        width: 150px;
+        height: 40px;
+        display: flex;
+        justify-content: space-around;
+
+        .address_zipcode_input {
+          width: 150px;
+          height: 40px;
+          border-radius: 8px;
+        }
+      }
+
+      .address_text {
+        width: 300px;
+        border-radius: 8px;
+        height: 40px;
+        margin-bottom: 5px;
+      }
+
+      .address_botton {
+        text-align: center;
+        width: 130px;
+        height: 40px;
+        border-radius: 4px;
+        color: rgb(95, 0, 128);
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(95, 0, 128);
+      }
+
+      p {
+        margin: 10px;
+        font-family: 'Pretendard-Regular';
+      }
+
+    }
+
+  }
+
+  .phone_full {
+
+    display: flex;
+
+    .signup_phone_botton {
+      width: 150px;
+      border: 1px solid gainsboro;
+      border-radius: 5px;
+      margin-left: 5px;
+    }
+  }
+
+  .signup_birth {
+    display: flex;
+
+
+    div {
+      border-radius: 4px;
+
+      .birthdayFrame {
+        border: 1px solid rgb(221, 221, 221);
+
+        select {
+          border: none;
+          width: 105px;
+          text-align: center;
+          border-radius: 8px;
+          height: 35px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .member_signup_agree {
+    width: 100%;
+    padding: 10px 0px 10px 20px;
+  }
+
+  .signup_bottom {
+    margin-left: 30px;
+    display: inline-flex;
+    height: 380px;
+
+    .signup_bottom_title {
+      width: 150px;
+      font-size: 1.3rem;
+
+      label {
+        font-weight: bold;
+        font-family: 'Pretendard-Regular';
+      }
+    }
+
+    .signup_notic {
+
+      div {
+        font-size: 1.3rem;
+      }
+
+      label {
+        margin-top: 10px;
+        font-family: 'Pretendard-Regular';
+
+      }
+
+      a {
+        border: 1px solid blue;
+        font-family: 'Pretendard-Regular';
+      }
+
+      .label_box {
+        margin-top: 0px
+      }
+
+      .signup_notic_sub {
+        font-size: x-small;
+        font-family: 'Pretendard-Regular';
+        padding-left: 50px;
+        color: gray;
+      }
+
+      .member_radio_title {
+        display: flex;
+        margin-top: -55px;
+        left: 20px;
+      }
+    }
+
+    .control_container {
+      height: 60px;
+
+      .screen_reader {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+        margin: -1px;
+        clip-path: inset(50%);
+      }
+
+      .label_box {
+        position: relative;
+        width: 100%;
+        font-family: 'Pretendard-Regular';
+
+        .check_icon {
+          width: 1.4em;
+          height: 1.4em;
+          border-radius: 50%;
+          background-color: #fff;
+          border: 1px solid gray;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+
+          &::before {
+            content: "";
+            position: absolute;
+            box-sizing: border-box;
+            width: 30%;
+            height: 55%;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-70%) rotateZ(40deg);
+            border-right: 1.7px solid gray;
+            border-bottom: 1.7px solid gray;
+          }
+        }
+
+        .signup_link {
+          display: block;
+          text-align: right;
+          color: rgb(95, 0, 128);
+        }
+      }
+
+      label {
+        width: 100%;
+        padding-left: 2.2em;
+        position: relative;
+        cursor: pointer;
+        font-family: 'Pretendard-Regular';
+      }
+
+      [type="checkbox"]:checked+.label-box .check-icon {
+        border-color: rgb(95, 0, 128);
+        background-color: rgb(95, 0, 128);
+        ;
+      }
+
+      [type="checkbox"]:checked+.label-box .check-icon::before {
+        border-color: #fff;
+      }
+    }
+
+  }
+
+  .member_radio {
+    cursor: pointer;
+    display: inline;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    vertical-align: center;
+    margin-right: 8px;
+  }
+
+  .member_radio .radio_input {
+
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  .member_radio .icon {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    transition: opacity 0.3s ease;
+  }
+
+
+  .member_radio .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .member_line_bottom {
+    border-bottom: 1px solid #d6d6d6bb;
+  }
+}
+
+/******************************
+ * member : My Page 
+ ******************************/
+.member_content_outline {
+  width: 100%;
+  background-color: #f2f5f8;
+
+  .member_content {
+    width: 1050px;
+    position: relative;
+    margin: 0px auto;
+
+    .kakao_button {
+      display: flex;
+
+      img {
+        width: 80px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .member_my_page {
+      display: flex;
+
+      .member_popup {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        img {
+          cursor: pointer;
+
+        }
+      }
+
+      .member_my_side {
+        width: 375px;
+        margin: 30px 0 30px 0;
+        background-color: #fff;
+        border-radius: 8px;
+
+        div {
+          height: 50px;
+
+          p {
+            margin-bottom: 20px;
+            font-family: 'Pretendard-Regular';
+            color: #b5b5b5;
+          }
+
+          span {
+            font-size: 1.2rem;
+            font-family: 'Pretendard-Regular';
+          }
+
+          label {
+            font-family: 'Pretendard-Regular';
+            font-size: 1.5rem;
+            color: #333333;
+            text-align: center;
+            top: 20px;
+            font-weight: 700;
+            font-size: 16px;
+          }
+        }
+
+        .member_my_side_1 {
+          height: 150px;
+          padding: 40px;
+
+          .member_my_customer {
+            span {
+              font-family: 'Pretendard-Regular';
+              font-weight: 600;
+              font-size: 1.5rem;
+            }
+
+            .shimmer_text {
+              font-family: 'Pretendard-Regular';
+              font-size: 24px;
+              font-weight: bold;
+              background: linear-gradient(to right, #767ae4 0%, #5ba7db 100%);
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-size: 300% auto;
+              animation: textShine 1s ease-in-out infinite alternate;
+            }
+
+            @keyframes textShine {
+              0% {
+                background-position: 0% 0%;
+              }
+
+              100% {
+                background-position: 100% 100%;
+              }
+            }
+          }
+
+
+          .member_my_side_point {
+            border: 1px solid #d6d6d6bb;
+            border-radius: 8px;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+
+            label {
+              padding: 5px;
+              display: block;
+              justify-content: center;
+            }
+
+            label:first-child {
+              margin-top: 20px;
+            }
+          }
+        }
+
+        .activeTab {
+          border-radius: 8px;
+
+          label {
+            color: rgb(95, 0, 128);
+            font-weight: bold;
+          }
+
+          span {
+            color: rgb(95, 0, 128);
+            font-weight: bold;
+          }
+        }
+
+        .member_my_sand {
+          height: 15px;
+          background-color: #f2f5f8;
+        }
+
+        .member_click {
+          cursor: pointer;
+
+          label {
+            cursor: pointer;
+          }
+        }
+
+        .member_my_side_2 {
+          height: 180px;
+          padding: 30px 50px 50px 50px;
+
+          div {
+            display: flex;
+            margin-right: 10px;
+
+            span {
+              display: inline-block;
+              margin-left: auto;
+              font-weight: bold;
+            }
+
+            label {
+              margin-top: 5px;
+            }
+          }
+        }
+
+        .member_my_side_3 {
+          height: 200px;
+          padding: 50px;
+        }
+      }
+
+      .memever_my_right {
+        width: 650px;
+        margin-left: 40px;
+
+        label,
+        span {
+          font-family: 'Pretendard-Regular';
+        }
+
+        .member_coupon_box {
+          height: 500px;
+          margin: auto;
+
+          div {
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            height: 500px;
+
+          }
+        }
+
+        .member_order_box_false {
+          height: 500px;
+          margin: auto;
+
+          div {
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            height: 500px;
+          }
+        }
+
+        .member_my_right_1 {
+          margin-top: 30px;
+          background-color: #fff;
+          border-radius: 8px;
+          height: auto;
+
+          .member_my_right_title {
+            font-family: 'Pretendard-Regular';
+            width: 600px;
+            padding: 20px;
+            font-weight: 600;
+            font-size: 2rem;
+            display: flex;
+            margin: auto;
+            border-bottom: 3px solid #333333;
+
+            span {
+              margin-top: 10px;
+              padding-left: 8px;
+              font-size: 13px;
+              line-height: 20px;
+              letter-spacing: -0.2px;
+              color: rgb(153, 153, 153);
+            }
+
+            p {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              height: 24px;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: -0.4px;
+            }
+          }
+
+          .member_my_button {
+            display: flex;
+            justify-content: space-around;
+
+            button {
+              margin: 20px 0 20px 0;
+              width: 120px;
+              height: 40px;
+              border-radius: 20px;
+              background-color: #f2f5f8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/******************************
+ * member : update 
+ ******************************/
+.member_update_form {
+  padding-bottom: 40px;
+  width: 640px;
+
+  .update_form {
+    ul {
+      li {
+        width: 700px;
+        padding: 20px;
+
+        label {
+          display: inline-block;
+          font-size: 1.1em;
+          font-weight: 700;
+          text-indent: 3px;
+          margin: 0 0 6px 10px;
+          width: 25%;
+        }
+
+        .member_address {
+          margin-left: 180px;
+          width: 350px;
+        }
+
+        .update_full_input {
+          display: inline-block;
+          border: 1px solid gainsboro;
+          border-radius: 8px;
+          width: 200px;
+          height: 30px;
+          padding-left: 10px;
+        }
+
+        .email_full {
+          display: inline-block;
+
+          .emailname {
+            border-radius: 8px;
+            width: 200px;
+            height: 30px;
+            padding-left: 10px;
+          }
+
+          .emaildomain {
+            border-radius: 8px;
+            width: 150px;
+            height: 30px;
+            padding-left: 10px;
+          }
+        }
+
+
+        .address_full {
+          display: flex;
+
+          .address_label {
+            width: 170px;
+
+          }
+
+          div {
+            margin-bottom: 10px;
+
+          }
+
+          .address_top {
+            margin: auto;
+            display: flex;
+
+            .address_zipcode {
+              input {
+                width: 150px;
+                height: 40px;
+                border-radius: 8px;
+              }
+            }
+          }
+
+          .address_bottom {
+            .address_zipcode_input {
+              width: 150px;
+              height: 40px;
+              border-radius: 8px;
+            }
+          }
+
+          .address_text {
+            display: block;
+            width: 370px;
+            border-radius: 8px;
+            height: 40px;
+            margin-bottom: 5px;
+          }
+
+          .address_botton {
+
+            margin-left: 10px;
+            text-align: center;
+            width: 140px;
+            height: 40px;
+            border-radius: 4px;
+            color: rgb(95, 0, 128);
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(95, 0, 128);
+          }
+        }
+      }
+    }
+
+    .member_update_button {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    .member_update_button2 {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+
+      .member_true_button {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+/******************************
+ * mypage : 주문내역
+ ******************************/
+.member_order_box {
+
+  margin-bottom: 20px;
+}
+
+.member_order {
+  padding: 20px;
+
+  ul {
+    li {
+      cursor: pointer;
+    }
+  }
+
+  .member_order_num {
+    p {
+      padding-bottom: 2px;
+      font-size: 1.3rem;
+      font-weight: 900;
+    }
+
+    label,
+    span {
+      color: #848f9a;
+
+    }
+  }
+
+  .member_order_border {
+    min-width: 100%;
+    min-height: 1px;
+    background-color: #eceff3;
+    margin: 15px 0 15px 0;
+  }
+
+  .member_order_list {
+    margin: 15px 0 15px 0;
+
+    .member_order_detail {
+      display: flex;
+
+      .member_order_sub {
+
+        font-family: 'Pretendard-Regular';
+        margin-left: 10px;
+
+        .member_order_pname {
+          font-family: 'Pretendard-Regular';
+          color: #222;
+          font-size: 13px;
+        }
+
+        span {
+          color: #848f9a;
+          font-weight: lighter;
+        }
+
+        .member_order_price {
+          display: flex;
+          margin-top: 10px;
+
+          p {
+            font-family: 'Pretendard-Regular';
+            color: #222;
+            font-weight: bold;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .member_order_price {
+    font-family: 'Pretendard-Regular';
+  }
+}
+
+/******************************
+ * delivery : 새벽배송 안내 
+ ******************************/
+.member_delivery {
+  position: relative;
+  margin: 0px auto;
+
+  .delivery_top {
+    width: 100%;
+    background-color: #d8d1df;
+    text-align: center;
+  }
+
+  .delivery_content {
+    min-width: 1050px;
+    margin: 0px auto;
+
+    .delivery_1 {
+      width: 100%;
+      background-color: #eae6e2;
+      text-align: center;
+    }
+
+    .delivery_2 {
+      width: 100%;
+      text-align: center;
+    }
+
+    .delivery_3 {
+      width: 100%;
+      background-color: #e9e7f1;
+      text-align: center;
+    }
+  }
+}
+
+/******************************
+ * find : 아이디·비밀번호 찾기
+ ******************************/
+.member_form_box {
+  span {
+    font-family: 'Pretendard-Regular';
+  }
+
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  .find_messege {
+    margin-bottom: 10px;
+
+    label {
+      font-family: 'Pretendard-Regular';
+    }
+  }
+
+  .find_button {
+    .find_button_toggle {
+      width: 150px;
+      display: inline-block;
+      height: 50px;
+      margin-bottom: 20px;
+
+      label {
+        font-family: 'Pretendard-Regular';
+        font-size: 16px;
+      }
+
+      .button_toggle_on {
+        border-bottom: 5px solid rgb(95, 0, 128);
+        padding-top: 20px;
+      }
+    }
+  }
+
+  ul {
+    text-align: center;
+
+    li {
+      padding: 5px;
+      margin-bottom: 5px;
+
+      .loginform_input {
+        font-family: 'Pretendard-Regular';
+        width: 320px;
+        height: 46px;
+        padding: 0px 11px 1px 15px;
+        border-radius: 4px;
+        border: 1px solid rgb(221, 221, 221);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgb(51, 51, 51);
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      .find_email_name {
+        font-family: 'Pretendard-Regular';
+        width: 160px;
+        height: 46px;
+        padding: 0px 11px 1px 15px;
+        border-radius: 4px;
+        border: 1px solid rgb(221, 221, 221);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgb(51, 51, 51);
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      .find_email_domain {
+        font-family: 'Pretendard-Regular';
+        height: 46px;
+        padding: 0px 11px 1px 15px;
+        border-radius: 4px;
+        border: 1px solid rgb(221, 221, 221);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgb(51, 51, 51);
+        outline: none;
+        box-sizing: border-box;
+      }
+    }
+
+    .login_founder {
+      text-align: right;
+      font-size: 12px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .member_title_box {
+    text-align: center;
+    margin: 90px 0px 30px 0px;
+
+    span {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+  }
+}
+/******************************
+ * find : 아이디·비밀번호 찾기 결과
+ ******************************/
+.message_box{
+        font-family: 'Pretendard-Regular';
+  width: 320px;
+  height: 200px;
+  .message_icon{
+    font-size: 3rem;
+    fill: #5f0080;
+    margin-bottom: 10px;
+  }
+  .message_top{
+    span{
+    font-family: 'Pretendard-Regular';
+    padding-top: 30px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+  }
+}
+
+.message_bottom{
+  margin-bottom: 10px;
+  span{
+    font-family: 'Pretendard-Regular';
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+  } 
+  }
+  .message_result{
+    background-color: #e9e7f1;
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    p{ 
+      margin-top: 17px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 21px;
+      font-family: 'Pretendard-Regular';
+    }
+}
+}
