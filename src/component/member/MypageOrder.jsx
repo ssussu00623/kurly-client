@@ -18,7 +18,7 @@ export default function MypageOrder() {
             const id = localStorage.getItem("user_id");
 
             axios
-                .post('http://43.201.27.254:9000/member/order', { id })
+                .post('http://54.180.92.85:9000/member/order', { id })
                 .then((res) => {
                     const orders = res.data;
                     if (Array.isArray(orders)) {

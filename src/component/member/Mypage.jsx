@@ -39,7 +39,7 @@ export default function Mypage() {
     useEffect(() => {
         const id = localStorage.getItem("user_id");
         axios
-            .post('http://43.201.27.254:9000/member/mypage', { 'id': id })
+            .post('http://54.180.92.85:9000/member/mypage', { 'id': id })
             .then(res => setUserName(res.data.name))
             .catch((error) => console.log(error));
     }, []); // 의존성 배열 추가

@@ -51,7 +51,7 @@ export const handleDuplicateIdCheck = (idRef, pwdRef, setIdCheckResult) => {
         return false;
     } else {
         axios
-            .post('http://43.201.27.254:9000/member/idcheck', { "id": idRef.current.value })
+            .post('http://54.180.92.85:9000/member/idcheck', { "id": idRef.current.value })
             .then(res => {
                 if (res.data.result === 1) {
                     alert('이미 사용중인 아이디 입니다. 새로운 아이디를 입력해주세요.')

@@ -30,7 +30,7 @@ export default function SuccessPage() {
     }, []);
 
     async function confirmPayment() {
-        await fetch("http://43.201.27.254:9000/sandbox-dev/api/v1/payments/confirm", {
+        await fetch("http://54.180.92.85:9000/sandbox-dev/api/v1/payments/confirm", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message: "테스트 결제 승인 요청" })
@@ -53,7 +53,7 @@ export default function SuccessPage() {
             }));
     
         if (sendOrders.length) {
-            await axios.post('http://43.201.27.254:9000/order/add', { orderList: sendOrders }); // 서버로 전송
+            await axios.post('http://54.180.92.85:9000/order/add', { orderList: sendOrders }); // 서버로 전송
             await deleteCheckedItems(checkedItems); // 체크된 상품 장바구니 삭제
             localStorage.removeItem("checkedItems"); // 로컬스토리지 checkedItems 삭제
             setIsConfirmed(true);

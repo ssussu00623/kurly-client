@@ -18,7 +18,7 @@ export default function MainProductListSlider({category}) {
   }
 
   useEffect(()=>{
-    axios.post('http://43.201.27.254:9000/main/category', {'category': category})
+    axios.post('http://54.180.92.85:9000/main/category', {'category': category})
           .then((res)=>setMainProductList(res.data))
           .catch((error)=>console.log(error))
   },[category]);

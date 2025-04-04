@@ -16,7 +16,7 @@ export function useOrder() {
         const id = localStorage.getItem('user_id');
         const checkedItems = JSON.parse(localStorage.getItem("checkedItems")) 
 
-        const result = await axios.post('http://43.201.27.254:9000/order/all', {'id': id, 'checkedItems' : checkedItems});
+        const result = await axios.post('http://54.180.92.85:9000/order/all', {'id': id, 'checkedItems' : checkedItems});
         setOrderList(result.data);
         // setMember(result.data[0]);
         // useCalculate(result.data); 
@@ -29,7 +29,7 @@ export function useOrder() {
     //     ********************************************/
     
     // const saveToOrder = async (OrderList) => { 
-    //         const result = await axios.post('http://43.201.27.254:9000/order/add', { orderList: OrderList });
+    //         const result = await axios.post('http://54.180.92.85:9000/order/add', { orderList: OrderList });
     //         console.log("주문 저장 성공:", result.data);
     //         return result.data;
     //     } 
@@ -41,7 +41,7 @@ export function useOrder() {
         ********************************************/
                 const getUserInfo = async () => {
                     const id = localStorage.getItem("user_id");
-                    const result = await axios.post("http://43.201.27.254:9000/member/mypage", { id });
+                    const result = await axios.post("http://54.180.92.85:9000/member/mypage", { id });
                     setUserInfo({
                         name: result.data.name,
                         phone: result.data.phone,

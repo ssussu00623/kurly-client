@@ -55,7 +55,7 @@ export default function NewProduct() {
     // upload file
     const getFileName = (filenames) => {       
         setFname(filenames);
-        setPreviewImg(`http://43.201.27.254:9000/${filenames.upload_name}`);
+        setPreviewImg(`http://54.180.92.85:9000/${filenames.upload_name}`);
     }
     const getMultiFilesName = (filenames) => {
         setFnames(filenames);
@@ -116,7 +116,7 @@ export default function NewProduct() {
                 };
         if(validator() ) {
            console.log('formData',formData);
-            axios.post('http://43.201.27.254:9000/product/new',formData)
+            axios.post('http://54.180.92.85:9000/product/new',formData)
                     .then(res =>{
                             if(res.data.affectedRows === 1){
                                 alert(`상품이 등록되었습니다.\n리스트화면으로 이동합니다.`);

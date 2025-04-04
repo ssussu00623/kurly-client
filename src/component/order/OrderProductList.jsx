@@ -12,7 +12,7 @@ export default function OrderProductList({ isToggled, toggleList, orderList }) {
               <li key={item.no}>
                 <div className='space-between'>
                   <div className='order-item flex'>
-                    <img style={{ width: "56px", borderRadius: "10px" }} src={`http://43.201.27.254:9000/${item.upload_img}`} alt="" />
+                    <img style={{ width: "56px", borderRadius: "10px" }} src={`http://54.180.92.85:9000/${item.upload_img}`} alt="" />
                     <div className='order-item-text'>
                       <p>{item.subject}</p>
                       <p style={{ fontSize: "13px", color: "#bcc4cc" }}>{item.sub_desc}</p>
