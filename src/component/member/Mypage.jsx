@@ -90,7 +90,7 @@ export default function Mypage() {
                         </div>
                         <div className='member_popup'>
                             <div>
-                                <img onClick={() => navigate("/main/special")} src="kurly-db-default.c5c00c6s66l9.ap-northeast-2.rds.amazonaws.com9.ap-northeast-2.rds.amazonaws.com/images/commonImage/event10.jpg" style={{ width: "350px" }} />
+                                <img onClick={() => navigate("/main/special")} src="http://kurly-db-default.c5c00c6s66l9.ap-northeast-2.rds.amazonaws.com9.ap-northeast-2.rds.amazonaws.com/images/commonImage/event10.jpg" style={{ width: "350px" }} />
                             </div>
                         </div>
                         <div className='member_my_side_3'>

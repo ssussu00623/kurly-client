@@ -43,7 +43,7 @@ export default function NewProduct() {
     const [selectNavSub,setSelectNavSub] = useState(null);
 
     useEffect(() => {
-        axios.get('kurly-db-default.c5c00c6s66l9.ap-northeast-2.rds.amazonaws.com9.ap-northeast-2.rds.amazonaws.com/data/newProductOption.json')
+        axios.get('http://kurly-db-default.c5c00c6s66l9.ap-northeast-2.rds.amazonaws.com9.ap-northeast-2.rds.amazonaws.com/data/newProductOption.json')
             .then(res => {
                 setNavList(res.data);
                 setNavSub(res.data[1].depth2);
