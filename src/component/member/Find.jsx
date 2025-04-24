@@ -51,7 +51,7 @@ export default function Find() {
         } else {
             // Axios 요청 - 아이디 찾기
             axios
-                .post('http://54.180.92.85:9000/member/findid', { name, phone })
+                .post('http://localhost:9000/member/findid', { name, phone })
                 .then((response) => {
                     if (response.data.success) {
                         setMessage(`${response.data.id}`); // 성공 메시지 상태로 저장
@@ -103,7 +103,7 @@ export default function Find() {
         if (result) {
             // Axios 요청 - 비밀번호 찾기
             axios
-                .post('http://54.180.92.85:9000/member/findpwd', { id, phone, emailname, emaildomain }) // emailname과 emaildomain을 합쳐서 서버에 전달
+                .post('http://localhost:9000/member/findpwd', { id, phone, emailname, emaildomain }) // emailname과 emaildomain을 합쳐서 서버에 전달
                 .then((response) => {
                     if (response.data.success) {
                         setMessage(`${response.data.pwd}`); // 성공 메시지 상태로 저장 

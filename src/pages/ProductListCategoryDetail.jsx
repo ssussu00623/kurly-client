@@ -12,8 +12,8 @@ export default function ProductListCategoryDetail() {
     const fetchCategoryData = async() =>{
       try {
        const result =  
-        (categorySid === undefined) ? await axios.post('http://54.180.92.85:9000/main/categories', {cid : categoryCid})
-         : await axios.post('http://54.180.92.85:9000/main/subcategories', {cid : categoryCid, sid: categorySid});
+        (categorySid === undefined) ? await axios.post('http://localhost:9000/main/categories', {cid : categoryCid})
+         : await axios.post('http://localhost:9000/main/subcategories', {cid : categoryCid, sid: categorySid});
         setCateProductList(result.data); 
       } catch (error) {
          console.log(error);

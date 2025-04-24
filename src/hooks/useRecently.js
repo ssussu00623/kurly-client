@@ -12,7 +12,7 @@ export function useRecently() {
   
       if(localPidArray !== null) {
         if(localPidArray.length !==0 ){
-          const result =await axios.post('http://54.180.92.85:9000/main/recentlyViewItem', {"pidArray":localPidArray});
+          const result =await axios.post('http://localhost:9000/main/recentlyViewItem', {"pidArray":localPidArray});
           
           if (JSON.stringify(prevRecentlyItemsRef.current) !== JSON.stringify(result.data)) {
             prevRecentlyItemsRef.current = result.data; 

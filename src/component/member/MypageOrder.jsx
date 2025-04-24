@@ -10,7 +10,7 @@ export default function MypageOrder() {
     const navigate = useNavigate();
     const textRef = useRef();
 
-    const [orderlist, setorderlist] = useState([]);
+    const [orderList, setOrderList] = useState([]);
     const [totalPriceByTid, setTotalPriceByTid] = useState({});
 
     useEffect(() => {
@@ -18,13 +18,13 @@ export default function MypageOrder() {
             const id = localStorage.getItem("user_id");
 
             axios
-                .post('http://54.180.92.85:9000/member/order', { id })
+                .post('http://localhost:9000/member/order', { id })
                 .then((res) => {
                     const orders = res.data;
                     if (Array.isArray(orders)) {
                         orders.sort((a, b) => new Date(b.order_date) - new Date(a.order_date));
 
-                        setorderlist(orders);
+                        setOrderList(orders);
 
                         const priceByTid = orders.reduce((acc, order) => {
                             if (acc[order.tid]) {
@@ -62,7 +62,7 @@ export default function MypageOrder() {
     };
 
     // 주문번호(tid)별로 상품 그룹화하기
-    const groupedOrders = orderlist.reduce((acc, order) => {
+    const groupedOrders = orderList.reduce((acc, order) => {
         if (!acc[order.tid]) {
             acc[order.tid] = [];
         }

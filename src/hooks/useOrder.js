@@ -6,18 +6,18 @@ import axios from 'axios';
 
 export function useOrder() {
 
-    const { setorderlist, setUserInfo } = useContext(OrderContext);
+    const { setOrderList, setUserInfo } = useContext(OrderContext);
 
         /********************************************
                 전체 주문정보 가져오기 (장바구니에서 체크된 상품)
                 사용처 : Order
         ********************************************/
-    const getorderlist = async() => {
+    const getOrderList = async() => {
         const id = localStorage.getItem('user_id');
         const checkedItems = JSON.parse(localStorage.getItem("checkedItems")) 
 
-        const result = await axios.post('http://54.180.92.85:9000/order/all', {'id': id, 'checkedItems' : checkedItems});
-        setorderlist(result.data);
+        const result = await axios.post('http://localhost:9000/order/all', {'id': id, 'checkedItems' : checkedItems});
+        setOrderList(result.data);
         // setMember(result.data[0]);
         // useCalculate(result.data); 
         return result.data;
@@ -28,8 +28,8 @@ export function useOrder() {
     //             사용처 : Success
     //     ********************************************/
     
-    // const saveToOrder = async (orderlist) => { 
-    //         const result = await axios.post('http://54.180.92.85:9000/order/add', { orderlist: orderlist });
+    // const saveToOrder = async (OrderList) => { 
+    //         const result = await axios.post('http://localhost:9000/order/add', { orderList: OrderList });
     //         console.log("주문 저장 성공:", result.data);
     //         return result.data;
     //     } 
@@ -41,7 +41,7 @@ export function useOrder() {
         ********************************************/
                 const getUserInfo = async () => {
                     const id = localStorage.getItem("user_id");
-                    const result = await axios.post("http://54.180.92.85:9000/member/mypage", { id });
+                    const result = await axios.post("http://localhost:9000/member/mypage", { id });
                     setUserInfo({
                         name: result.data.name,
                         phone: result.data.phone,
@@ -57,6 +57,6 @@ export function useOrder() {
 
 
 
-    return {getorderlist, getUserInfo} ;
+    return {getOrderList, getUserInfo} ;
 }
 

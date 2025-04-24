@@ -54,7 +54,7 @@ export default function Detail() {
         }
     }
     useEffect(() => {
-        axios.post('http://54.180.92.85:9000/product/detail', { 'pid': pid })
+        axios.post('http://localhost:9000/product/detail', { 'pid': pid })
             .then((res) => {
                 setProduct(res.data[0]);
             })
@@ -155,7 +155,7 @@ export default function Detail() {
                    const isAlreadyWished = prevWishList.includes(product.pid); 
                    const updateWishList =  isAlreadyWished ? wishList.filter((prev)=>prev !== product.pid) : [...prevWishList, product.pid];
     
-                   axios.post("http://54.180.92.85:9000/main/wishListUpdate", {id, wishList :updateWishList})
+                   axios.post("http://localhost:9000/main/wishListUpdate", {id, wishList :updateWishList})
                         .then((res)=>{
                             if(res.data === 1 ){
                                 setHeart(!isAlreadyWished);  
@@ -203,12 +203,12 @@ export default function Detail() {
                         {/* left */}
                         <div className="img_area">
                             <div className="img">
-                                <img src={`http://54.180.92.85:9000/${product.image_url}`} alt={product.name} />
+                                <img src={`http://localhost:9000/${product.image_url}`} alt={product.name} />
                                 <div className="dc">+{product.discountRate} 쿠폰</div>
                                 <div className="payback">페이백</div>
                             </div>
                             <div className="brand">
-                                <div className="thumb"><img src={`http://54.180.92.85:9000/${product.image_url}`} alt={product.brand} /></div>
+                                <div className="thumb"><img src={`http://localhost:9000/${product.image_url}`} alt={product.brand} /></div>
                                 <div className="brand_info">
                                     <strong>브랜드관</strong>
                                     <span>{product.brand} &gt;</span>

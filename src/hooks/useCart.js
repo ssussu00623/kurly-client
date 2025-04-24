@@ -13,7 +13,7 @@
                 const getCartList = async () => {
                     const id = localStorage.getItem("user_id");
                     // 로컬 스토리지에 id 저장되도록 업뎃 되면 수정 예정
-                    const result = await axios.post("http://54.180.92.85:9000/cart/items", { "id": id });
+                    const result = await axios.post("http://localhost:9000/cart/items", { "id": id });
                     setCartList(result.data);
                     setCartCount(result.data.length);
                 };
@@ -25,7 +25,7 @@
                 사용처 : Detail
         ********************************************/
         const saveToCartList = async (formData) => {
-            const result = await axios.post("http://54.180.92.85:9000/cart/add", formData);
+            const result = await axios.post("http://localhost:9000/cart/add", formData);
             if (result.data.result_rows) {
                 setCartCount(cartCount + 1);
                 getCartList();
@@ -40,7 +40,7 @@
         ********************************************/
         const updateCartList = async (no, type, qty) => {
             console.log("보낼데이터->", { no, type, qty });
-            const result = await axios.put('http://54.180.92.85:9000/cart/updateQty',
+            const result = await axios.put('http://localhost:9000/cart/updateQty',
                 { "no": no, 'type': type, 'qty': qty });
             result.data.result_rows && getCartList();
             return result.data.result_rows;
@@ -55,7 +55,7 @@
 
             const id = localStorage.getItem("user_id");
             if (id.length) {
-                const result = await axios.post("http://54.180.92.85:9000/cart/count", { "id": id })
+                const result = await axios.post("http://localhost:9000/cart/count", { "id": id })
                 setCartCount(result.data.count)
                 return result.data.count;
             } else {
@@ -79,7 +79,7 @@
         ********************************************/
 
         const deleteCartItem = async (no) => {
-            const result = await axios.delete("http://54.180.92.85:9000/cart/deleteItem", { data: { "no": no } })
+            const result = await axios.delete("http://localhost:9000/cart/deleteItem", { data: { "no": no } })
             // 삭제 성공 후 장바구니 리스트 재호출
             result.data.result_rows && getCartList();
         }
@@ -92,7 +92,7 @@
         *******************************************/
 
                 const deleteCheckedItems = async (nos) => {
-                    const result = await axios.delete("http://54.180.92.85:9000/cart/deleteCheck", {
+                    const result = await axios.delete("http://localhost:9000/cart/deleteCheck", {
                         data: { nos } 
                     });
                     if (result.data.result_rows > 0) {
@@ -110,7 +110,7 @@
         if (!id) return;
 
         try {
-            const res = await axios.post("http://54.180.92.85:9000/member/mypage", { id });
+            const res = await axios.post("http://localhost:9000/member/mypage", { id });
             if (res.data) {
                 setCartAddress({
                     zipcode: res.data.zipcode || "",

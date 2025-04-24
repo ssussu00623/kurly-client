@@ -64,11 +64,11 @@ export default function Header() {
     const fetchCategory = useCallback(async () => {
       try {
         if (user_id) {
-          const user_info = await axios.post('http://54.180.92.85:9000/main/userinfo', { id: user_id });
+          const user_info = await axios.post('http://localhost:9000/main/userinfo', { id: user_id });
           setUserAddress((prev) => prev !== user_info.data ? user_info.data : prev);
         }
-        const category = await axios.post('http://54.180.92.85:9000/main/categories');
-        const sub_cate = await axios.post('http://54.180.92.85:9000/main/subcategories');
+        const category = await axios.post('http://localhost:9000/main/categories');
+        const sub_cate = await axios.post('http://localhost:9000/main/subcategories');
         setCategoryList((prev) => JSON.stringify(prev) !== JSON.stringify(category.data) ? category.data : prev);
         setSubCategoryList((prev) => JSON.stringify(prev) !== JSON.stringify(sub_cate.data) ? sub_cate.data : prev);
       } catch (error) {
@@ -80,7 +80,7 @@ export default function Header() {
     /* 위시리스트 값 가져오기  */
     const fetchWishList = useCallback(async () => {
       if (!user_id) return;
-      const wishListData = await axios.post('http://54.180.92.85:9000/main/wishList', { id: user_id });
+      const wishListData = await axios.post('http://localhost:9000/main/wishList', { id: user_id });
       setWishList((prev) => JSON.stringify(prev) !== JSON.stringify(wishListData.data[0]?.wish) ? wishListData.data[0]?.wish : prev);
     }, [user_id]); 
     
@@ -93,7 +93,7 @@ export default function Header() {
   const handleComplete = (data) => {  
     const address = `${data.address}${data.buildingName ? `(${data.buildingName})` : ''}`;
     if(user_id){
-      axios.post('http://54.180.92.85:9000/main/addressUpdate', { address, id: user_id })
+      axios.post('http://localhost:9000/main/addressUpdate', { address, id: user_id })
            .then((res)=>{
             console.log(res.data)
             setUserAddress(res.data)})

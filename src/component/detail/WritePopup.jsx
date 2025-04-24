@@ -50,14 +50,14 @@ export default function WritePopup({src, name,pid, checkIsTrue, file, setUpdate}
         if(validator()){
             if(fnames.uploadname){
                 formData = {...formData,'images':fnames.uploadname, 'id':id, 'pid':pid};      
-                axios.post('http://54.180.92.85:9000/review',formData)
+                axios.post('http://localhost:9000/review',formData)
                     .then(res =>{
                         if(res.data.affectedRows === 1)  setUpdate(1)
                     })
                     .catch(err => console.log(err));
            } else{
                 formData = {...formData, 'id':id, 'pid':pid};                 
-                axios.post('http://54.180.92.85:9000/inquire',formData)
+                axios.post('http://localhost:9000/inquire',formData)
                     .then(res =>{
                         if(res.data.affectedRows === 1)  setUpdate(1)
                     })
@@ -72,7 +72,7 @@ export default function WritePopup({src, name,pid, checkIsTrue, file, setUpdate}
                     <div className="box_area" style={{height : file ? '800px' : '690px'}}>
                         <div className="tit">{ file ? '상품 리뷰 쓰기' : '상품 문의하기' }<button type="button" onClick={() => checkIsTrue(false)}><MdClose /></button></div>
                         <div className="product">
-                            <div className="thumb"> <img src={`http://54.180.92.85:9000/${src}`} alt={name} /></div>
+                            <div className="thumb"> <img src={`http://localhost:9000/${src}`} alt={name} /></div>
                             <div>{name}</div>
                         </div>
                         <form onSubmit={handleSubmit}>

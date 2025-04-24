@@ -47,7 +47,7 @@ export default function ProductItem({no, name, price, dc, img, packaging, icons,
                         <div className='product-bottom'>
                             <Packaging2 packaging={packaging} />
                             <div className='product-item-center'>
-                                <img src={`http://54.180.92.85:9000/${img}`} alt="상품 미리보기 이미지" />
+                                <img src={`http://localhost:9000/${img}`} alt="상품 미리보기 이미지" />
                                 <div className='product-item-center2'>
                                     <div>
                                         <p className="product-price f16 w600">

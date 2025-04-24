@@ -24,10 +24,10 @@ export default function Login() {
         if (validateLogin(refs)) { 
             //서버전송
             try {
-                const res = await axios.post('http://54.180.92.85:9000/member/login', formData);
+                const res = await axios.post('http://localhost:9000/member/login', formData);
 
                 if (res.data.result_rows === 1) {
-                    const user_type = await axios.post('http://54.180.92.85:9000/member/type', { 'id': formData.id });
+                    const user_type = await axios.post('http://localhost:9000/member/type', { 'id': formData.id });
                     localStorage.setItem("token", res.data.token);
                     localStorage.setItem("user_id", formData.id);
                     localStorage.setItem("user_type", user_type.data);

@@ -57,7 +57,7 @@ export default function Postcode({ addAddress }) {
         };
 
         try {
-            const response = await axios.post("http://54.180.92.85:9000/member/addressUpdate", updatedData);
+            const response = await axios.post("http://localhost:9000/member/addressUpdate", updatedData);
             if (response.data.result_rows) {
                 alert("배송지가 성공적으로 변경되었습니다.");
                 addAddress(updatedData); // 부모 컴포넌트에도 주소 업데이트

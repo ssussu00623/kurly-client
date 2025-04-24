@@ -109,7 +109,7 @@ export default function Signup() {
                 alert("중복 확인을 진행해 주세요");
                 return false;
             } else {
-                axios.post('http://54.180.92.85:9000/member/signup', formData)
+                axios.post('http://localhost:9000/member/signup', formData)
                     .then(res => {
                         if (res.data.result_rows === 1) {
                             alert("회원가입에 성공하셨습니다.");

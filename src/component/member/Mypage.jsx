@@ -39,7 +39,7 @@ export default function Mypage() {
     useEffect(() => {
         const id = localStorage.getItem("user_id");
         axios
-            .post('http://54.180.92.85:9000/member/mypage', { 'id': id })
+            .post('http://localhost:9000/member/mypage', { 'id': id })
             .then(res => setUserName(res.data.name))
             .catch((error) => console.log(error));
     }, []); // 의존성 배열 추가
@@ -90,7 +90,7 @@ export default function Mypage() {
                         </div>
                         <div className='member_popup'>
                             <div>
-                                <img onClick={() => navigate("/main/special")} src="http://kurly-db-default.c5c00c6s66l9.ap-northeast-2.rds.amazonaws.com9.ap-northeast-2.rds.amazonaws.com/images/commonImage/event10.jpg" style={{ width: "350px" }} />
+                                <img onClick={() => navigate("/main/special")} src="http://localhost:3000/images/commonImage/event10.jpg" style={{ width: "350px" }} />
                             </div>
                         </div>
                         <div className='member_my_side_3'>

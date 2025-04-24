@@ -16,7 +16,7 @@ export default function MypageHeart() {
   const id = localStorage.getItem('user_id');
 
   useEffect(()=>{
-      axios.post('http://54.180.92.85:9000/main/wishListInfo', {id})
+      axios.post('http://localhost:9000/main/wishListInfo', {id})
            .then((res)=>{
               setPidArray(res.data)
               setWishListCnt(res.data.length)            
@@ -28,7 +28,7 @@ export default function MypageHeart() {
       setWishList((prevWishList)=>{
         const updateWishList =  prevWishList.filter((item)=> item !== pid);
         console.log('updateWishList',updateWishList);
-        axios.post("http://54.180.92.85:9000/main/wishListUpdate", {id, 'wishList':updateWishList})
+        axios.post("http://localhost:9000/main/wishListUpdate", {id, 'wishList':updateWishList})
              .then((res)=>{
                if(res.data === 1 ){
                  setWishList(updateWishList);

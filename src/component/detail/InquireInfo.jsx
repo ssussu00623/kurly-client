@@ -45,13 +45,13 @@ export default function InquireInfo({src, name, pid}) {
     }
     useEffect(() => {
         setId(localStorage.getItem('user_id'));
-        axios.post('http://54.180.92.85:9000/inquire/getList',{'pid':pid})
+        axios.post('http://localhost:9000/inquire/getList',{'pid':pid})
                 .then(res => setData(res.data))
                 .catch(err => console.log(err));
     },[update]);
 
     const reloadData = () => {
-        axios.post('http://54.180.92.85:9000/inquire/getList',{'pid':pid})
+        axios.post('http://localhost:9000/inquire/getList',{'pid':pid})
                 .then(res => setData(res.data))
                 .catch(err => console.log(err));
     }
@@ -60,7 +60,7 @@ export default function InquireInfo({src, name, pid}) {
             textRef.current.focus();
         }else{
             try{
-                const result = await axios.post('http://54.180.92.85:9000/inquire/answer',{'iid':iid,'text':textRef.current.value})
+                const result = await axios.post('http://localhost:9000/inquire/answer',{'iid':iid,'text':textRef.current.value})
                 if(result.data.affectedRows === 1) reloadData();
             }catch(err){
                 console.error('Error while posting answer:', err);

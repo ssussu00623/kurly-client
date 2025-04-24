@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function OrderProductList({ isToggled, toggleList, orderlist }) {
+export default function OrderProductList({ isToggled, toggleList, orderList }) {
   return (
     <div className={isToggled ? 'order-list' : 'hide-list'} onClick={toggleList}>
       {isToggled ? (
@@ -8,11 +8,11 @@ export default function OrderProductList({ isToggled, toggleList, orderlist }) {
           <p className='f16 w600' style={{ padding: "16px 0px 0px 16px" }}>샛별배송</p>
           <div className='order-list-bar'></div>
           <ul>
-            {orderlist.map(item => (
+            {orderList.map(item => (
               <li key={item.no}>
                 <div className='space-between'>
                   <div className='order-item flex'>
-                    <img style={{ width: "56px", borderRadius: "10px" }} src={`http://54.180.92.85:9000/${item.upload_img}`} alt="" />
+                    <img style={{ width: "56px", borderRadius: "10px" }} src={`http://localhost:9000/${item.upload_img}`} alt="" />
                     <div className='order-item-text'>
                       <p>{item.subject}</p>
                       <p style={{ fontSize: "13px", color: "#bcc4cc" }}>{item.sub_desc}</p>
@@ -30,9 +30,9 @@ export default function OrderProductList({ isToggled, toggleList, orderlist }) {
         </div>
       ) : (
         <p className='f16'>
-          {orderlist.length <= 1
-            ? `${orderlist[0]?.subject} 상품을 주문합니다`
-            : `${orderlist[0]?.subject} 외 ${orderlist.length - 1}개 상품을 주문합니다`}
+          {orderList.length <= 1
+            ? `${orderList[0]?.subject} 상품을 주문합니다`
+            : `${orderList[0]?.subject} 외 ${orderList.length - 1}개 상품을 주문합니다`}
         </p>
       )}
     </div>

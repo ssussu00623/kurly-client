@@ -32,14 +32,14 @@ export default function ReviewInfo({src, name, pid, setReviewCount}) {
 
         setIsUpdating(true);
 
-        axios.post('http://54.180.92.85:9000/review/getList',{'pid':pid})
+        axios.post('http://localhost:9000/review/getList',{'pid':pid})
                 .then(res => {
                     setData(res.data);
                     setReviewCount(res.data.length);
                 })
                 .catch(err => console.log(err));
                 
-        axios.post('http://54.180.92.85:9000/review/getImages',{'pid':pid})
+        axios.post('http://localhost:9000/review/getImages',{'pid':pid})
                 .then(res => {
                     let newList = [];
                     for(let item of res.data){
@@ -58,7 +58,7 @@ export default function ReviewInfo({src, name, pid, setReviewCount}) {
     const reloadData = () => {
         if(isUpdating) return;
         setIsUpdating(true);
-        axios.post('http://54.180.92.85:9000/review/getList',{'pid':pid})
+        axios.post('http://localhost:9000/review/getList',{'pid':pid})
                 .then(res => {
                     setData(res.data);
                     setReviewCount(res.data.length);
@@ -83,7 +83,7 @@ export default function ReviewInfo({src, name, pid, setReviewCount}) {
         openTotalSlider();
     }
     const orderByDate = () => {       
-        axios.post('http://54.180.92.85:9000/review/getDateList',{'pid':pid})
+        axios.post('http://localhost:9000/review/getDateList',{'pid':pid})
                 .then(res => setData(res.data))
                 .catch(err => console.log(err));
     }
@@ -110,11 +110,11 @@ export default function ReviewInfo({src, name, pid, setReviewCount}) {
     
     // count
     const increment = async (rid) => {
-        const result = await axios.post('http://54.180.92.85:9000/review/getPlusCount',{'rid':rid})
+        const result = await axios.post('http://localhost:9000/review/getPlusCount',{'rid':rid})
         if(result.data.result_rows === 1) reloadData();
     }
     const decrement = async (rid) => {
-        const result = await axios.post('http://54.180.92.85:9000/review/getMinusCount',{'rid':rid})
+        const result = await axios.post('http://localhost:9000/review/getMinusCount',{'rid':rid})
         if(result.data.result_rows === 1) reloadData();
     }
     

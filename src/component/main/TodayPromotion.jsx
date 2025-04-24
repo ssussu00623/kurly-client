@@ -8,7 +8,7 @@ export default function TodayPromotion() {
   let rows = [];
 
   useEffect(()=>{
-    axios.post('http://54.180.92.85:9000/main/category', {category: 'special_price'})
+    axios.post('http://localhost:9000/main/category', {category: 'special_price'})
          .then((res)=> setTodayPriceList(res.data))
          .catch((error)=>console.log(error));
   },[]);

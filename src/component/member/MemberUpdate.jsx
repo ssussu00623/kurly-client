@@ -81,7 +81,7 @@ export default function MemberUpdate() {
 
             // 서버에서 사용자 기존 정보를 가져오기
             axios
-                .post('http://54.180.92.85:9000/member/mypage', { id })
+                .post('http://localhost:9000/member/mypage', { id })
                 .then((res) => {
                     const memberData = res.data;
                     // 기존 데이터로 전환
@@ -146,7 +146,7 @@ export default function MemberUpdate() {
         if (validateMember(refs)) {
             // 유효성 검사를 통과하면 서버로 데이터 전송
             axios
-                .post('http://54.180.92.85:9000/member/update', formData)
+                .post('http://localhost:9000/member/update', formData)
                 .then((res) => {
                     if (res.data.result_rows) {
                         alert('업데이트 완료!');

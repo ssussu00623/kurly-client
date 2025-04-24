@@ -6,7 +6,7 @@ export default function ProductInfo({detailImgs}) {
             <ul>
                 {
                     detailImgs&& detailImgs.map((img,i) =>
-                        <li key={`image-${i}`}><img src={`http://54.180.92.85:9000/${img}`} alt="" /></li> 
+                        <li key={`image-${i}`}><img src={`http://localhost:9000/${img}`} alt="" /></li> 
                     )
                 }
             </ul>
