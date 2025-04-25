@@ -32,14 +32,14 @@ export default function ReviewInfo({src, name, pid, setReviewCount}) {
 
         setIsUpdating(true);
 
-        axios.post('http://localhost:9000/review/getList',{'pid':pid})
+        axios.post('http://13.209.41.189:9000/review/getList',{'pid':pid})
                 .then(res => {
                     setData(res.data);
                     setReviewCount(res.data.length);
                 })
                 .catch(err => console.log(err));
                 
-        axios.post('http://localhost:9000/review/getImages',{'pid':pid})
+        axios.post('http://13.209.41.189:9000/review/getImages',{'pid':pid})
                 .then(res => {
                     let newList = [];
                     for(let item of res.data){
@@ -58,7 +58,7 @@ export default function ReviewInfo({src, name, pid, setReviewCount}) {
     const reloadData = () => {
         if(isUpdating) return;
         setIsUpdating(true);
-        axios.post('http://localhost:9000/review/getList',{'pid':pid})
+        axios.post('http://13.209.41.189:9000/review/getList',{'pid':pid})
                 .then(res => {
                     setData(res.data);
                     setReviewCount(res.data.length);
@@ -83,7 +83,7 @@ export default function ReviewInfo({src, name, pid, setReviewCount}) {
         openTotalSlider();
     }
     const orderByDate = () => {       
-        axios.post('http://localhost:9000/review/getDateList',{'pid':pid})
+        axios.post('http://13.209.41.189:9000/review/getDateList',{'pid':pid})
                 .then(res => setData(res.data))
                 .catch(err => console.log(err));
     }
@@ -110,11 +110,11 @@ export default function ReviewInfo({src, name, pid, setReviewCount}) {
     
     // count
     const increment = async (rid) => {
-        const result = await axios.post('http://localhost:9000/review/getPlusCount',{'rid':rid})
+        const result = await axios.post('http://13.209.41.189:9000/review/getPlusCount',{'rid':rid})
         if(result.data.result_rows === 1) reloadData();
     }
     const decrement = async (rid) => {
-        const result = await axios.post('http://localhost:9000/review/getMinusCount',{'rid':rid})
+        const result = await axios.post('http://13.209.41.189:9000/review/getMinusCount',{'rid':rid})
         if(result.data.result_rows === 1) reloadData();
     }
     
@@ -136,7 +136,7 @@ export default function ReviewInfo({src, name, pid, setReviewCount}) {
                 <ul>
                     {
                         totalImages && totalImages.map((img, i)=>
-                            (i  < 8 ) ? <li onClick={openTotalSlider} key={i}><img src={img} alt="" /></li> :''
+                            (i  < 8 ) ? <li onClick={openTotalSlider} key={i}><img src={`http://13.209.41.189:9000/${img}`} alt="" /></li> :''
                         )
                     }
 
@@ -170,7 +170,7 @@ export default function ReviewInfo({src, name, pid, setReviewCount}) {
                                         <div className='thumb_list'>
                                             <ul>
                                                 {item.images && item.images.map((img, idx)=>
-                                                    <li onClick={() => openSlider(index)} key={idx}><img src={img} alt="" /></li>
+                                                    <li onClick={() => openSlider(index)} key={idx}><img src={`http://13.209.41.189:9000/${img}`} alt="" /></li>
                                                 )}
                                             </ul>
                                         </div>
@@ -206,7 +206,7 @@ export default function ReviewInfo({src, name, pid, setReviewCount}) {
                             navigation = {{nextEl: '.pop_slide .swiper-next', prevEl: '.pop_slide .swiper-prev'} }  
                         >
                             {slideImgs && slideImgs.map((img,i) =>
-                                <SwiperSlide key={`${img}_${i}`}><a href='' target='_blank'><img src={img} alt="" /></a></SwiperSlide>
+                                <SwiperSlide key={`${img}_${i}`}><a href='' target='_blank'><img src={`http://13.209.41.189:9000/${img}`} alt="" /></a></SwiperSlide>
                             )}
                         </Swiper>
                         {

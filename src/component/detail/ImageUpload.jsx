@@ -9,7 +9,7 @@ export default function ImageUpload({getFileName}) {
 
         formData.append("file",e.target.files[0]);
         formData.append("oldFile",oldFile);
-        axios.post('http://localhost:9000/upload/file',formData,{
+        axios.post('http://13.209.41.189:9000/upload/file',formData,{
                     "headers":{"Content-type":"multipart/form-data"}
                 })
                 .then(res => {

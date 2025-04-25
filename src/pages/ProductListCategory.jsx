@@ -12,7 +12,7 @@ export default function ProductListCategory() {
     const categoryMap = {new:'신상품', best:'베스트', discount: '알뜰쇼핑', special: '특가/혜택'};
 
     useEffect(() =>{
-      axios.post('http://localhost:9000/main/category' , {category: categoryName, searchKeyword:search })
+      axios.post('http://13.209.41.189:9000/main/category' , {category: categoryName, searchKeyword:search })
            .then(res =>  setProductList(res.data))
            .catch(error => console.log(error));
     },[categoryName, search]);

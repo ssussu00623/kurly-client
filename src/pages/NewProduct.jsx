@@ -43,7 +43,7 @@ export default function NewProduct() {
     const [selectNavSub,setSelectNavSub] = useState(null);
 
     useEffect(() => {
-        axios.get('http://kurly-db-default.c5c00c6s66l9.ap-northeast-2.rds.amazonaws.com/data/newProductOption.json')
+        axios.get('http://kurly-team.s3-website.ap-northeast-2.amazonaws.com/data/newProductOption.json')
             .then(res => {
                 setNavList(res.data);
                 setNavSub(res.data[1].depth2);
@@ -55,7 +55,7 @@ export default function NewProduct() {
     // upload file
     const getFileName = (filenames) => {       
         setFname(filenames);
-        setPreviewImg(`http://localhost:9000/${filenames.upload_name}`);
+        setPreviewImg(`http://13.209.41.189:9000/${filenames.upload_name}`);
     }
     const getMultiFilesName = (filenames) => {
         setFnames(filenames);
@@ -116,7 +116,7 @@ export default function NewProduct() {
                 };
         if(validator() ) {
            console.log('formData',formData);
-            axios.post('http://localhost:9000/product/new',formData)
+            axios.post('http://13.209.41.189:9000/product/new',formData)
                     .then(res =>{
                             if(res.data.affectedRows === 1){
                                 alert(`상품이 등록되었습니다.\n리스트화면으로 이동합니다.`);
@@ -245,7 +245,7 @@ export default function NewProduct() {
                     <div className="f_wrap upload_file">
                         <ul className='preview_list'>
                             { previewList && previewList.map((file) =>
-                                <li><img src={file}/></li>
+                                <li><img src={`http://13.209.41.189:9000/${file}`}/></li>
                             )}
                         </ul>
                     </div>
@@ -262,7 +262,7 @@ export default function NewProduct() {
                     <div className="f_wrap upload_file">
                         <ul className='preview_list'>
                             { previewList2 && previewList2.map((file) =>
-                                <li><img src={file}/></li>
+                                <li><img src={`http://13.209.41.189:9000/${file}`}/></li>
                             )}
                         </ul>
                     </div>
