@@ -101,7 +101,7 @@ export default function Mypage() {
                                 </div>
                                 <div className='kakao_button'> 
                                     <label onClick={() => memberClick()} style={{ cursor: "pointer" }}>1:1문의 </label>
-                                    <KakaoTalkButton />
+                                    <KakaoTalkButton onClick={src="https://pf.kakao.com/_bLnGn/chat"}/>
                                 </div>
                             </div>
                         </div>
