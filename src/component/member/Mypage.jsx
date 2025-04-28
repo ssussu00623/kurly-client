@@ -90,7 +90,8 @@ export default function Mypage() {
                         </div>
                         <div className='member_popup'>
                             <div>
-                                <img onClick={() => navigate("/main/special")} src="http://localhost:3000/images/commonImage/event10.jpg" style={{ width: "350px" }} />
+                                <img onClick={() => navigate("/main/special")} src="http://kurly-team.s3-website.ap-northeast-2.amazonaws.com/images/commonImage/event10.jpg" 
+                                style={{ width: "350px", borderRadius:"10px" }} />
                             </div>
                         </div>
                         <div className='member_my_side_3'>
@@ -99,13 +100,9 @@ export default function Mypage() {
                                 <div className={`member_click ${activeTab === 'update' ? 'activeTab' : ''}`} onClick={() => handleMenuClick('update')}>
                                     <label>개인정보 수정</label>
                                 </div>
-                                <div className='kakao_button'>
+                                <div className='kakao_button'> 
                                     <label onClick={() => memberClick()} style={{ cursor: "pointer" }}>1:1문의 </label>
-                                    <KakaoTalkButton onClick={() => {
-                                        window.open("https://pf.kakao.com/_bLnGn/chat", "_blank", "width=400,height=600,left=200,top=100");
-                                    }} />
-
-
+                                    <KakaoTalkButton />  
                                 </div>
                             </div>
                         </div>
